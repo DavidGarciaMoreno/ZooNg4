@@ -6,6 +6,9 @@ var bcrypt = require('bcrypt-nodejs');
 // modelos
 var User = require('../models/user');
 
+// servicios
+var jwt = require('../services/jwt.js');
+
 // acciones
 function pruebas(req, res) {
 	res.status(200).send({
@@ -74,7 +77,14 @@ function login(req, res) {
 			if(user) {
 				bcrypt.compare(password, user.password, (err, check) => {
 					if(check) {
-						res.status(200).send({ user });		
+						if(params.gettoken) {
+							// devolver token jwt
+							res.status(200).send({
+								token: jwt.createToken(user)
+							});
+						} else {
+							res.status(200).send({ user });		
+						}
 					} else {
 						res.status(404).send({
 							message: 'La contraseña no es válida'
