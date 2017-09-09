@@ -1,0 +1,72 @@
+.navigation.col-lg-12 {
+  margin-top: 10px;
+}
+
+.jumbotron {
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #ccc;
+}
+
+.navbar-nav .active {
+  border-bottom: 3px solid orange;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  border-bottom: 3px solid orange;
+  transition: all 300ms;
+}
+
+.boton_transiciones {
+	padding: 10px;
+	background: red;
+	color: white;
+	border-radius: 20px;
+	border: 4px solid blue;
+	transition: all 2s;
+	display: block;
+	width: 100px;
+}
+
+.boton_transiciones:hover{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #ccc;
+	border: 1px solid red;
+}
+
+.caja_animada {
+	margin-top: 15px;
+	background: green;
+	border: 5px solid black;
+	width: 200px;
+	height: 200px;
+	animation-name: deslizamiento;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes deslizamiento {
+	0% {
+		margin-left: 0px;
+	}
+	50% { 
+		margin-left: 400px;
+	}
+	100% { 
+		margin-left: 0px;
+		background: yellow;
+	}
+
+}
+
+@keyframes deslizamiento1 {
+	from {
+		margin-left: 0px;
+	}
+	to { 
+		margin-left: 400px;
+	}
+}
