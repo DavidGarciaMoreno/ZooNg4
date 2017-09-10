@@ -12,7 +12,8 @@ var jwt = require('../services/jwt.js');
 // acciones
 function pruebas(req, res) {
 	res.status(200).send({
-		message: 'Probando el controlador de usuarios y la accion pruebas'
+		message: 'Probando el controlador de usuarios y la accion pruebas',
+		user: req.user
 	});
 }
 
