@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 // modulos
 var bcrypt = require('bcrypt-nodejs');
